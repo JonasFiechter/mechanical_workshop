@@ -13,3 +13,10 @@ commands = {
     'add': add_obj,
     'remove': remove_obj,
 }
+
+def execute(command):
+    if command in commands.keys():
+        commands[command]()
+    
+    else:
+        return 'invalid option'
